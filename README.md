@@ -8,22 +8,21 @@ This section focuses on how to bring data into your Python environment from vari
 Learn how to import data from different file formats and sources, handle basic loading parameters, and perform initial inspections of the imported data.
 
 **Key Operations and Code Examples:**
-
 | Package/Method | Description | Code Example |
 |---|---|---|
-| `pd.read_csv()` | Read a CSV file into a pandas DataFrame. | ```python\ndf = pd.read_csv(<CSV_path>, header = None)  # load without header\ndf = pd.read_csv(<CSV_path>, header = 0)   # load using first row as header\n``` <br> **Note:** In JupyterLite, download the file locally and use the local path. In other environments, you can use the URL directly. |
-| `df.head(n)` | Print the first few entries of the DataFrame (default 5). | ```python\ndf.head(n)  # n = number of entries; default is 5\n``` |
-| `df.tail(n)` | Print the last few entries of the DataFrame (default 5). | ```python\ndf.tail(n)  # n = number of entries; default is 5\n``` |
-| `df.columns = headers` | Assign appropriate header names to the DataFrame. | ```python\ndf.columns = headers\n``` |
-| `df.replace("?", np.nan)` | Replace specific values (e.g., "?") with NumPy's `NaN` (Not a Number) for handling missing data. | ```python\ndf = df.replace("?", np.nan)\n``` |
-| `df.dtypes` | Retrieve the data types of each column in the DataFrame. | ```python\ndf.dtypes\n``` |
-| `df.describe()` | Generate descriptive statistics of the DataFrame. By default, it analyzes numerical columns. Use `include="all"` to include all data types. | ```python\ndf.describe()\ndf.describe(include="all")\n``` |
-| `df.info()` | Provide a concise summary of the DataFrame, including data types, non-null values, and memory usage. | ```python\ndf.info()\n``` |
-| `df.to_csv(<output CSV path>)` | Save the processed DataFrame to a CSV file at the specified path. | ```python\ndf.to_csv(<output CSV path>)\n``` |
+| `pd.read_csv()` | Read a CSV file into a pandas DataFrame. | `df = pd.read_csv(<CSV_path>, header = None)  # load without header` <br> `df = pd.read_csv(<CSV_path>, header = 0)   # load using first row as header` <br> **Note:** In JupyterLite, download the file locally and use the local path. In other environments, you can use the URL directly. |
+| `df.head(n)` | Print the first few entries of the DataFrame (default 5). | `df.head(n)  # n = number of entries; default is 5` |
+| `df.tail(n)` | Print the last few entries of the DataFrame (default 5). | `df.tail(n)  # n = number of entries; default is 5` |
+| `df.columns = headers` | Assign appropriate header names to the DataFrame. | `df.columns = headers` |
+| `df.replace("?", np.nan)` | Replace specific values (e.g., "?") with NumPy's `NaN` (Not a Number) for handling missing data. | `df = df.replace("?", np.nan)` |
+| `df.dtypes` | Retrieve the data types of each column in the DataFrame. | `df.dtypes` |
+| `df.describe()` | Generate descriptive statistics of the DataFrame. By default, it analyzes numerical columns. Use `include="all"` to include all data types. | `df.describe()` <br> `df.describe(include="all")` |
+| `df.info()` | Provide a concise summary of the DataFrame, including data types, non-null values, and memory usage. | `df.info()` |
+| `df.to_csv(<output CSV path>)` | Save the processed DataFrame to a CSV file at the specified path. | `df.to_csv(<output CSV path>)` |
 
 **Example Notebook:**
 
-* [notebooks/01_Importing_Data.ipynb](notebooks/01_Importing_Data.ipynb) (Please create this notebook with detailed examples of the operations above)
+* [notebooks/01_Importing_Data.ipynb](notebooks/01_Importing_Data.ipynb)
 
 ## 2. Data Wrangling
 
