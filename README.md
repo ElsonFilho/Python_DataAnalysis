@@ -26,7 +26,7 @@ Learn how to import data from different file formats and sources, handle basic l
 
 ## 2. Data Wrangling
 
-This section covers the essential steps involved in cleaning, transforming, and structuring your data for effective analysis.
+This section covers the essential steps involved in cleaning, transforming, and structuring your data for effective analysis.<BR>
 Perform some fundamental data wrangling tasks that form the pre-processing phase of data analysis. These tasks include handling missing values in data, formatting data to standardize it and make it consistent, normalizing data, grouping data values into bins, and converting categorical variables into numerical quantitative variables to ensure data quality and consistency.
 
 **Example Notebook:**
