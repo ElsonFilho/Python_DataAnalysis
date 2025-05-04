@@ -27,12 +27,11 @@ Learn how to import data from different file formats and sources, handle basic l
 ## 2. Data Wrangling
 
 This section covers the essential steps involved in cleaning, transforming, and structuring your data for effective analysis.
-
-**Description:** Learn techniques for handling missing values, standardizing and normalizing data, binning, and converting data types to ensure data quality and consistency.
+Perform some fundamental data wrangling tasks that form the pre-processing phase of data analysis. These tasks include handling missing values in data, formatting data to standardize it and make it consistent, normalizing data, grouping data values into bins, and converting categorical variables into numerical quantitative variables to ensure data quality and consistency.
 
 **Example Notebook:**
 
-* [notebooks/02_Data_Wrangling.ipynb](notebooks/02_Data_Wrangling.ipynb) (Include examples of handling missing data, data formatting, and data normalization/standardization)
+* [notebooks/02_Data_Wrangling.ipynb](notebooks/02_Data_Wrangling.ipynb) 
 
 ## 3. Exploratory Data Analysis (EDA)
 
