@@ -50,8 +50,6 @@ This section focuses on techniques for visually and statistically exploring your
 
 **Description:** Discover how to use various plotting libraries (like Matplotlib and Seaborn) and statistical methods to understand the distribution of variables, identify correlations, and detect potential outliers.
 
-# Exploratory Data Analysis
-
 | Package/Method                      | Description                                                                                                                                       | Code Example |
 |------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|--------------|
 | **Complete dataframe correlation** | Correlation matrix created using all the attributes of the dataset.                                                                               | `df.corr()` |
