@@ -93,11 +93,20 @@ Learn the fundamental steps in model development, including selecting appropriat
 
 * [notebooks/04_Model_Development.ipynb](notebooks/04_Model_Development.ipynb) 
 
-## 5. Model Evaluation and Refinement
+## 5. Model Refinement and Evaluation
 
 This section focuses on assessing the performance of your developed models and techniques for improving their accuracy and generalization.
 
 Understand various evaluation metrics for different types of models and explore methods for hyperparameter tuning and model selection.
+
+| Process                        | Description                                                                                                                                                            | Code Example |
+|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|
+| Splitting data for training and testing | Separate the target attribute from the rest of the data. Then split the input and output datasets into training and testing subsets. | `from sklearn.model_selection import train_test_split`<br>`y_data = df['target_attribute']`<br>`x_data = df.drop('target_attribute', axis=1)`<br>`x_train, x_test, y_train, y_test = train_test_split(x_data, y_data, test_size=0.10, random_state=1)` |
+| Cross validation score        | When data is limited, use cross validation to evaluate model performance across multiple folds using R² scores.                     | `from sklearn.model_selection import cross_val_score`<br>`from sklearn.linear_model import LinearRegression`<br>`lre = LinearRegression()`<br>`Rcross = cross_val_score(lre, x_data[['attribute_1']], y_data, cv=n)`<br>`Mean = Rcross.mean()`<br>`Std_dev = Rcross.std()` |
+| Cross validation prediction   | Use a cross-validated model to predict output values.                                                                             | `from sklearn.model_selection import cross_val_predict`<br>`from sklearn.linear_model import LinearRegression`<br>`lre = LinearRegression()`<br>`yhat = cross_val_predict(lre, x_data[['attribute_1']], y_data, cv=4)` |
+| Ridge Regression and Prediction | Use Ridge regression with alpha to avoid overfitting in polynomial models.                                                        | `from sklearn.linear_model import Ridge`<br>`pr = PolynomialFeatures(degree=2)`<br>`x_train_pr = pr.fit_transform(x_train[['attribute_1', 'attribute_2', ...]])`<br>`x_test_pr = pr.fit_transform(x_test[['attribute_1', 'attribute_2', ...]])`<br>`RidgeModel = Ridge(alpha=1)`<br>`RidgeModel.fit(x_train_pr, y_train)`<br>`yhat = RidgeModel.predict(x_test_pr)` |
+| Grid Search                   | Use Grid Search with cross-validation to find the best alpha value for Ridge regression.                                          | `from sklearn.model_selection import GridSearchCV`<br>`from sklearn.linear_model import Ridge`<br>`parameters = [{'alpha': [0.001, 0.1, 1, 10, 100, 1000, 10000, ...]}]`<br>`RR = Ridge()`<br>`Grid1 = GridSearchCV(RR, parameters, cv=4)`<br>`Grid1.fit(x_data[['attribute_1', 'attribute_2', ...]], y_data)`<br>`BestRR = Grid1.best_estimator_`<br>`BestRR.score(x_test[['attribute_1', 'attribute_2', ...]], y_test)` |
+
 
 **Example Notebook:**
 
