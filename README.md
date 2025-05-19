@@ -110,4 +110,12 @@ Understand various evaluation metrics for different types of models and explore 
 
 **Example Notebook:**
 
-* [notebooks/05_Model_Evaluation_and_Refinement.ipynb](notebooks/05_Model_Evaluation_and_Refinement.ipynb) 
+* [notebooks/05_Model_Evaluation_and_Refinement.ipynb](notebooks/05_Model_Evaluation_and_Refinement.ipynb)
+
+
+
+## 6. One more complete example
+
+**Example Notebook:**
+
+* [notebooks/06_Model_Evaluation_and_Refinement.ipynb](notebooks/06_DataAnalytics_HousePricing.ipynb)
